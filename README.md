@@ -26,6 +26,11 @@ Tersedia **20 jenis hobi berbeda** dan **20 contoh kalimat**.
 - Status bicara langsung, animasi saat dibacakan, dan dukungan keyboard (Tab, Enter/Spasi, Esc)
 - Situs statis, tanpa build dan tanpa dependensi
 
+## Demo online
+
+Aplikasi ini dipublikasikan dengan GitHub Pages:
+**https://gurukayarayaid.github.io/gim-sound-hobby/**
+
 ## Menjalankan
 
 Cukup buka `index.html` di browser. Untuk hasil terbaik (terutama di IFP), jalankan lewat server lokal:
