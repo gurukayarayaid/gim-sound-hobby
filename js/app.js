@@ -242,9 +242,11 @@
   function draft() {
     const hobby = findHobby(el.builderHobby.value) || HOBBIES[0];
     const place = PLACES.find((p) => p.en === el.builderPlace.value) || PLACES[0];
+    // Kata pada kartu diawali huruf kapital; di tengah kalimat huruf pertamanya direndahkan.
+    const phrase = hobby.word.charAt(0).toLowerCase() + hobby.word.slice(1);
     return {
       hobby: hobby,
-      en: `I like ${hobby.word} ${place.prep} ${place.en}.`,
+      en: `I like ${phrase} ${place.prep} ${place.en}.`,
       idn: `Saya suka ${hobby.idn} di ${place.idn}.`
     };
   }

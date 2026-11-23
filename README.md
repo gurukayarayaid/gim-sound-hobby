@@ -3,22 +3,28 @@
 Media pembelajaran **Bahasa Inggris Kelas 3 SD** (topic: *My Hobby*). Aplikasi ini punya dua menu:
 
 1. **Kartu Hobi** — foto hobi, nama bahasa Inggris, arti bahasa Indonesia, dan ikon speaker untuk mengucapkan nama hobi.
-2. **Buat Kalimat** — pembuat kalimat otomatis (pilih hobi + tempat) dan **20 contoh kalimat**, masing-masing dengan ikon speaker untuk mengucapkan kalimatnya.
+2. **Buat Kalimat** — pembuat kalimat otomatis (pilih hobi + tempat) dan **11 contoh kalimat**, masing-masing dengan ikon speaker untuk mengucapkan kalimatnya.
 
-Tersedia **20 jenis hobi berbeda** dan **20 contoh kalimat**.
+Tersedia **11 jenis hobi** dan **11 contoh kalimat**.
+
+## Daftar hobi
+
+Swimming · Playing football · Dancing · Singing · Reading books · Riding a bike · Watching TV · Cooking · Drawing · Shopping · Gardening
+
+Enam kata pertama sesuai permintaan; lima kata berikutnya (Watching TV, Cooking, Drawing, Shopping, Gardening) diambil dari gambar daftar kosakata yang dibagikan.
 
 ## Fitur
 
 ### Kartu Hobi
-- 20 kartu dengan foto nyata: reading, swimming, painting, cooking, football, cycling, dancing, singing, gardening, fishing, hiking, drawing, sewing, jogging, yoga, chess, tennis, guitar, drums, camping
+- 11 kartu dengan foto nyata dan kata hobi yang sudah diperbarui
 - Tombol speaker di setiap kartu — suara dihasilkan langsung oleh browser lewat **Web Speech API** (`speechSynthesis`), tanpa file audio
 - Pilihan bahasa pengucapan: **English (en-US)** atau **Indonesia (id-ID)**
 - Pencarian hobi, filter kategori, tombol acak, dan layar penuh
 
 ### Buat Kalimat
-- Pilih **hobi** dan **tempat** → kalimat seperti *"I like reading a book in the library."* langsung terbentuk, lengkap dengan arti bahasa Indonesianya
+- Pilih **hobi** dan **tempat** → kalimat seperti *"I like reading books in the library."* langsung terbentuk, lengkap dengan arti bahasa Indonesianya
 - Tombol **🎲 Acak** untuk variasi kalimat, dan speaker besar untuk mendengarkan kalimat buatanmu
-- 20 contoh kalimat siap pakai (satu untuk tiap hobi), masing-masing dengan foto hobi dan tombol speaker kalimat
+- 11 contoh kalimat siap pakai (satu untuk tiap hobi), masing-masing dengan foto hobi dan tombol speaker kalimat
 - Pencarian kalimat/hobi dan tombol acak urutan
 
 ### Umum
@@ -53,10 +59,10 @@ Fitur pengucapan memakai `window.speechSynthesis` dan suara bawaan sistem operas
 gim-sound-hobby/
 ├── index.html
 ├── css/style.css
-├── js/data.js        # daftar 20 hobi (kata, arti, kategori, gambar)
-├── js/sentences.js   # 20 contoh kalimat + daftar tempat
+├── js/data.js        # daftar 11 hobi (kata, arti, kategori, gambar)
+├── js/sentences.js   # 11 contoh kalimat + daftar tempat
 ├── js/app.js         # render kartu/kalimat, filter, builder, dan pengucapan
-├── assets/hobbies/   # 20 foto hobi + CREDITS.md
+├── assets/hobbies/   # 11 foto hobi + CREDITS.md
 ├── jalankan.bat      # launcher server lokal (Windows)
 └── README.md
 ```
