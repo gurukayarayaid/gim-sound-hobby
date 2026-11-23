@@ -1,18 +1,29 @@
 # SOUND HOBBY — Kartu Hobi Bersuara
 
-Media pembelajaran **Bahasa Inggris Kelas 3 SD** (topic: *My Hobby*). Setiap kartu menampilkan **foto hobi**, **nama bahasa Inggris**, arti bahasa Indonesianya, dan **ikon speaker** yang jika diketuk akan **mengucapkan nama hobi** tersebut.
+Media pembelajaran **Bahasa Inggris Kelas 3 SD** (topic: *My Hobby*). Aplikasi ini punya dua menu:
 
-Tersedia **20 jenis hobi berbeda**.
+1. **Kartu Hobi** — foto hobi, nama bahasa Inggris, arti bahasa Indonesia, dan ikon speaker untuk mengucapkan nama hobi.
+2. **Buat Kalimat** — pembuat kalimat otomatis (pilih hobi + tempat) dan **20 contoh kalimat**, masing-masing dengan ikon speaker untuk mengucapkan kalimatnya.
+
+Tersedia **20 jenis hobi berbeda** dan **20 contoh kalimat**.
 
 ## Fitur
 
-- 20 kartu hobi dengan foto nyata: reading, swimming, painting, cooking, football, cycling, dancing, singing, gardening, fishing, hiking, drawing, sewing, jogging, yoga, chess, tennis, guitar, drums, camping
+### Kartu Hobi
+- 20 kartu dengan foto nyata: reading, swimming, painting, cooking, football, cycling, dancing, singing, gardening, fishing, hiking, drawing, sewing, jogging, yoga, chess, tennis, guitar, drums, camping
 - Tombol speaker di setiap kartu — suara dihasilkan langsung oleh browser lewat **Web Speech API** (`speechSynthesis`), tanpa file audio
 - Pilihan bahasa pengucapan: **English (en-US)** atau **Indonesia (id-ID)**
-- Tombol **Putar Semua** untuk mendengarkan seluruh kartu yang sedang ditampilkan secara berurutan (otomatis berhenti dengan tombol yang sama / tombol Esc)
-- Pencarian hobi, filter kategori, dan tombol acak urutan kartu
-- Tombol layar penuh untuk penggunaan di IFP / proyektor
-- Status bicara langsung, animasi kartu saat dibacakan, dan dukungan keyboard (Tab, Enter/Spasi, Esc)
+- Pencarian hobi, filter kategori, tombol acak, dan layar penuh
+
+### Buat Kalimat
+- Pilih **hobi** dan **tempat** → kalimat seperti *"I like reading a book in the library."* langsung terbentuk, lengkap dengan arti bahasa Indonesianya
+- Tombol **🎲 Acak** untuk variasi kalimat, dan speaker besar untuk mendengarkan kalimat buatanmu
+- 20 contoh kalimat siap pakai (satu untuk tiap hobi), masing-masing dengan foto hobi dan tombol speaker kalimat
+- Pencarian kalimat/hobi dan tombol acak urutan
+
+### Umum
+- Tombol **Putar Semua** di kedua menu untuk membacakan semua kartu/kalimat yang ditampilkan secara berurutan (berhenti dengan tombol yang sama atau tombol Esc)
+- Status bicara langsung, animasi saat dibacakan, dan dukungan keyboard (Tab, Enter/Spasi, Esc)
 - Situs statis, tanpa build dan tanpa dependensi
 
 ## Menjalankan
@@ -38,7 +49,8 @@ gim-sound-hobby/
 ├── index.html
 ├── css/style.css
 ├── js/data.js        # daftar 20 hobi (kata, arti, kategori, gambar)
-├── js/app.js         # render kartu, filter, dan logika pengucapan
+├── js/sentences.js   # 20 contoh kalimat + daftar tempat
+├── js/app.js         # render kartu/kalimat, filter, builder, dan pengucapan
 ├── assets/hobbies/   # 20 foto hobi + CREDITS.md
 ├── jalankan.bat      # launcher server lokal (Windows)
 └── README.md
