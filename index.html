@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sound Hobby — Dengarkan Nama Hobi · Kelas 3 SD</title>
+<meta name="description" content="Kartu gambar hobi lengkap dengan nama bahasa Inggris dan tombol speaker. Ketuk ikon speaker untuk mendengarkan pengucapannya.">
+<meta name="theme-color" content="#fff7ec">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23ff6b4a'/%3E%3Cpath d='M14 25h9l11-9v32l-11-9h-9z' fill='%23fff'/%3E%3Cpath d='M42 23a13 13 0 0 1 0 18M48 17a22 22 0 0 1 0 30' fill='none' stroke='%23fff' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ==================== ICON SPRITE ==================== -->
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="ico-speaker" viewBox="0 0 24 24">
+    <path d="M3.5 9.2v5.6h4.1l5.2 4.3V4.9L7.6 9.2H3.5Z" fill="currentColor"/>
+    <path d="M16.4 8.7a4.7 4.7 0 0 1 0 6.6M19.3 5.8a8.7 8.7 0 0 1 0 12.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ico-search" viewBox="0 0 24 24">
+    <circle cx="10.8" cy="10.8" r="6.3" fill="none" stroke="currentColor" stroke-width="2.2"/>
+    <path d="m15.5 15.5 4.3 4.3" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ico-shuffle" viewBox="0 0 24 24">
+    <path d="M3 6h3.3c4.4 0 5.3 12 10.4 12H21M18 15l3 3-3 3M3 18h3.3c1.6 0 2.8-1.5 3.8-3.6M14.2 9.3C15.1 7.3 16.1 6 17.3 6H21M18 3l3 3-3 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="ico-full" viewBox="0 0 24 24">
+    <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="ico-play" viewBox="0 0 24 24">
+    <path d="M8 5.3a1 1 0 0 1 1.5-.86l10 6.7a1 1 0 0 1 0 1.72l-10 6.7A1 1 0 0 1 8 18.7V5.3Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="ico-stop" viewBox="0 0 24 24">
+    <rect x="6" y="6" width="12" height="12" rx="2.5" fill="currentColor"/>
+  </symbol>
+</svg>
+
+<div class="page">
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="head">
+    <span class="badge">Bahasa Inggris · Kelas 3 SD · Topic: My Hobby</span>
+    <h1>Sound <em>Hobby</em><span class="dot">.</span></h1>
+    <p class="lede">Lihat gambar hobi, baca namanya, lalu <b>ketuk ikon speaker</b> untuk mendengarkan pengucapannya. Belajar kosakata jadi lebih seru!</p>
+    <div class="head-hint">
+      <span><svg class="ic"><use href="#ico-speaker"></use></svg> Ketuk speaker di setiap kartu</span>
+      <span class="sep"></span>
+      <span>20 hobi pilihan</span>
+    </div>
+  </header>
+
+  <!-- ==================== TOOLBAR ==================== -->
+  <section class="toolbar" aria-label="Pengaturan kartu">
+    <div class="tool-row">
+
+      <label class="search">
+        <svg class="ic"><use href="#ico-search"></use></svg>
+        <input type="search" id="search" placeholder="Cari hobi…" autocomplete="off" aria-label="Cari hobi">
+        <span class="search-clear" id="search-clear" role="button" tabindex="0" aria-label="Hapus pencarian" hidden>×</span>
+      </label>
+
+      <div class="lang-box">
+        <span class="lang-label">Dibacakan dalam</span>
+        <div class="seg" id="seg-lang" role="group" aria-label="Bahasa pengucapan">
+          <button type="button" data-lang="en" class="on" aria-pressed="true">🇬🇧 English</button>
+          <button type="button" data-lang="id" aria-pressed="false">🇮🇩 Indonesia</button>
+        </div>
+      </div>
+
+      <div class="tool-actions">
+        <button type="button" class="btn primary" id="btn-playall">
+          <svg class="ic"><use id="playall-icon" href="#ico-play"></use></svg><span id="playall-label">Putar Semua</span>
+        </button>
+        <button type="button" class="btn ghost" id="btn-shuffle">
+          <svg class="ic"><use href="#ico-shuffle"></use></svg><span>Acak</span>
+        </button>
+        <button type="button" class="btn ghost icon-only" id="btn-full" title="Layar penuh" aria-label="Layar penuh">
+          <svg class="ic"><use href="#ico-full"></use></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="chips" id="chips" role="group" aria-label="Filter kategori"></div>
+  </section>
+
+  <!-- ==================== STATUS ==================== -->
+  <div class="statusbar">
+    <div class="status" id="status" aria-live="polite">
+      <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span id="status-text">Siap! Ketuk ikon speaker pada kartu untuk mendengarkan.</span>
+    </div>
+    <span class="count" id="count">20 dari 20 hobi</span>
+  </div>
+
+  <!-- ==================== CARD GRID ==================== -->
+  <main>
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty" hidden>
+      <div class="empty-emoji">🔎</div>
+      <h2>Hobi tidak ditemukan</h2>
+      <p>Coba kata kunci lain atau pilih kategori <b>Semua</b>.</p>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <p>Gunakan <b>Chrome, Edge, atau Safari</b> terbaru agar fitur suara (Web Speech API) berjalan dengan baik.</p>
+  </footer>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
