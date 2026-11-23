@@ -32,6 +32,10 @@ Enam kata pertama sesuai permintaan; lima kata berikutnya (Watching TV, Cooking,
 - Status bicara langsung, animasi saat dibacakan, dan dukungan keyboard (Tab, Enter/Spasi, Esc)
 - Situs statis, tanpa build dan tanpa dependensi
 
+## Daftar kata dalam PDF
+
+[Unduh daftar kata hobi (PDF)](daftar-kata-hobi.pdf) — berisi 11 kata hobi beserta arti bahasa Indonesianya. Tautan unduh juga tersedia di bagian atas aplikasi.
+
 ## Demo online
 
 Aplikasi ini dipublikasikan dengan GitHub Pages:
@@ -64,6 +68,7 @@ gim-sound-hobby/
 ├── js/app.js         # render kartu/kalimat, filter, builder, dan pengucapan
 ├── assets/hobbies/   # 11 foto hobi + CREDITS.md
 ├── jalankan.bat      # launcher server lokal (Windows)
+├── daftar-kata-hobi.pdf # daftar 11 kata hobi + artinya
 └── README.md
 ```
 

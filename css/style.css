@@ -113,6 +113,23 @@ button, input { font: inherit; color: inherit; }
 .head-hint .ic { color: var(--coral); }
 .head-hint .sep { width: 4px; height: 4px; border-radius: 50%; background: var(--line-strong); }
 
+.pdf-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 2px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px dashed var(--line-strong);
+  background: rgba(255, 255, 255, .7);
+  color: var(--ink);
+  font-size: .78rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: border-color .15s, color .15s, background .15s;
+}
+.pdf-link:hover { border-color: var(--coral); color: var(--coral-deep); background: #fff; }
+
 /* ============================ TOOLBAR ============================ */
 
 .toolbar {
